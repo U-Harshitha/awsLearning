@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Homepage</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L2 7l10 5 10-5-10-5zm0 13L2 12v7l10 5 10-5v-7l-10 5z" />
+            </svg>
+            <span class="font-bold ml-2">MyWebsite</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
+          <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
+          <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Services</a>
+          <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/random');">
+    <div class="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
+      <div class="text-center">
+        <h1 class="text-white text-5xl font-bold">Welcome to My Website</h1>
+        <p class="text-gray-300 mt-4">We provide the best services to make your life better</p>
+        <a href="#" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-500">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Our Services</h2>
+        <p class="text-gray-600 mt-4">We offer a wide range of services to meet your needs</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Service One</h3>
+          <p class="text-gray-600">Description of the service goes here. It provides amazing features and benefits.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Service Two</h3>
+          <p class="text-gray-600">Description of the service goes here. It provides amazing features and benefits.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Service Three</h3>
+          <p class="text-gray-600">Description of the service goes here. It provides amazing features and benefits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <p class="text-gray-600">&copy; 2024 MyWebsite. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900">Privacy Policy</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden md:hidden">
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+  </div>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const btn = document.querySelector('button.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
